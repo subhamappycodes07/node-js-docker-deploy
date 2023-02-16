@@ -11,7 +11,11 @@ RUN npm install
 # Copying rest of the application to app directory
 COPY . ./
 
+# Setting env variable
+
+ENV PORT 5000
+
 # Expose the port and start the application
-EXPOSE 5000
+EXPOSE $PORT
 
 CMD ["npm","run","dev"]
