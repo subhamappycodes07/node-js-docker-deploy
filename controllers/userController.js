@@ -1,4 +1,4 @@
 const info = (req, res) => {
-    res.status(200).send({ msg: "Docker deployment using docker-compose prod" });
+    res.status(200).send({ msg: "Multiple container connection" });
 };
 module.exports = { info };
