@@ -4,7 +4,7 @@ FROM node:18
 WORKDIR /app
 
 # Install app dependencies
-COPY package*.json .
+COPY package*.json ./
 
 ARG NODE_ENV
 
