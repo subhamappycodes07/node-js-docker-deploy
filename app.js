@@ -8,6 +8,7 @@ console.log({ MONGO_USER, MONGO_PASS, MONGO_IP, MONGO_PORT })
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`
 
 const connectWithRetry = () => {
+    mongoose.set('strictQuery', true);
     mongoose.connect(mongoURL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
