@@ -5,8 +5,8 @@ services:
     #   context: .
     #   args:
     #     NODE_ENV: development
-    volumes:
-      - ./:/app
+    # volumes:
+    #   - ./:/app
     environment:
       - NODE_ENV=development
       - MONGO_USER=subham
