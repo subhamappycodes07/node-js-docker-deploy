@@ -1,4 +1,2 @@
 /node_modules
 .env
-docker-compose.backup.yml
-docker-compose.dev.yml
