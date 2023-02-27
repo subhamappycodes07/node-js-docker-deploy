@@ -1,6 +1,7 @@
 version: "3"
 services:
   node-app:
+    image: node-app
     build: .
     ports:
       - "5000:${PORT}"
