@@ -7,11 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: development
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build docker image
-        run: |
-          docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
-          docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
-          docker image prune
+          run: |
+            docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+            docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+            docker image prune
